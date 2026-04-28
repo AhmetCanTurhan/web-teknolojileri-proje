@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-light border-bottom border-dark border-2 py-2">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-75 bg-dark border-bottom border-dark border-2 py-2">
         <div class="container-fluid px-4">
             
-            <a class="navbar-brand" href="index.html">
-                <img src="img/act-seeklogo.png" alt="Logo" height="50">
+            <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
+                <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - Ana Sayfa</kucuk>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
@@ -22,23 +22,126 @@
 
             <div class="collapse navbar-collapse" id="anaMenu">
                 
-                <ul class="navbar-nav ms-auto border border-dark border-2 rounded p-2 text-center">
-                    <li class="nav-item px-2">
-                        <a class="nav-link text-dark fs-5 fw-bold" href="index.html">Ana Sayfa</a>
+                <ul class="navbar-nav mx-auto p-2 text-center my-3 my-lg-0">
+                    
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="ozgecmis.html">Özgeçmiş</a>
                     </li>
                     <li class="nav-item px-2">
-                        <a class="nav-link text-dark fs-5 fw-bold" href="hakkimizda.html">Hakkımızda</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link text-dark fs-5 fw-bold" href="iletisim.html">İletişim</a>
+                        <a class="nav-link text-light fs-5 fw-bold" href="iletisim.html">İletişim</a>
                     </li>
                 </ul>
 
-            </div>
-
-        </div>
+                <div class="d-flex justify-content-center mt-3 mt-lg-0">
+                    <a href="giris.html" class="btn btn-outline-light me-2">Giriş Yap</a>
+                    <a href="kayit.html" class="btn btn-light text-dark fw-bold">Kayıt Ol</a>
+                </div>
     </nav>
 
+    <div class="container-fluid px-3 pt-3">
+        
+        <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
+            <div class="text-center text-md-start text-light">
+                
+                <p class="fs-5 text-uppercase tracking-wide mb-1 text-light opacity-75">Merhaba, Ben</p>
+                <h1 class="display-4 fw-bold mb-3">Ahmet Can Turhan</h1>
+                <h2 class="fs-3 fw-light mb-4">Bilgisayar Mühendisliği Öğrencisi & Geliştirici</h2> 
+                
+                <p class="fs-5 fw-light lh-lg mb-4 opacity-75">
+                    Sakarya Üniversitesi'nde 1. sınıf öğrencisiyim. Ağırlıklı olarak C#, C++ ve web teknolojileri üzerinde çalışıyor, yazılım algoritmalarından oyun tasarımına kadar geniş bir yelpazede projeler geliştirerek teknoloji dünyasında kendimi sürekli yeniliyorum.
+                </p>
+
+                <h3 class="fs-4 fw-bold mb-3">🎮- HOBİLERİM</h3>
+                <p class="fs-5 fw-light lh-lg mb-4 opacity-75">
+                    Boş zamanlarımda oyun oynamayı, yeni teknolojileri keşfetmeyi ve kod yazmayı seviyorum. Futbol ile içli dışlıyım ve sık sık maç izlerim. Bunun haricinde video oyunlarını çok seviyorum, özellikle gizlilik ve parkur türündeki oyunlara ilgi duyuyorum. Ayrıca, yeni teknolojileri takip etmek ve yazılım geliştirme alanında kendimi sürekli geliştirmek benim için büyük bir tutku.
+                </p>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mt-4">
+                    <a href="https://www.linkedin.com/in/ahmetcanturhan" class="btn btn-light btn-lg fw-bold px-4 rounded-pill" target="_blank">Linkedin</a>
+                    <a href="https://github.com/ahmetcanturhan" class="btn btn-light btn-lg fw-bold px-4 rounded-pill" target="_blank">Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="container-fluid px-4 px-lg-3 mt-4 mb-1">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                
+                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 d-flex align-items-center">
+                    
+                    <img id="api-resim" src="https://via.placeholder.com/100x140" class="rounded me-4 border border-secondary" alt="Kapak" style="width: 100px; height: 140px; object-fit: cover;">
+                    
+                    <div>
+                        <h4 class="fs-4 text-white fw-bold border-bottom border-secondary pb-2 mb-2">Favori Dizilerimden Bir Parça</h4>
+                        
+                        <h5 id="api-isim" class="text-light mb-2">Yükleniyor...</h5>
+                        <span id="api-puan" class="badge bg-success fs-6 me-2">⭐ - / 10</span>
+                        <span id="api-tur" class="badge bg-secondary">Tür</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-4 px-lg-3 mt-2 mb-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                
+                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 d-flex align-items-center">
+                    
+                    <img id="api-resim" src="https://via.placeholder.com/100x140" class="rounded me-4 border border-secondary" alt="Kapak" style="width: 100px; height: 140px; object-fit: cover;">
+                    
+                    <div>
+                        <h4 class="fs-4 text-white fw-bold border-bottom border-secondary pb-2 mb-2">Favori Oyunlarımdan Bir Parça</h4>
+                        
+                        <h5 id="api-isim" class="text-light mb-2">Yükleniyor...</h5>
+                        <span id="api-puan" class="badge bg-success fs-6 me-2">⭐ - / 10</span>
+                        <span id="api-tur" class="badge bg-secondary">Tür</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const efsaneDiziler = [15299, 38963, 161, 169, 78665, 55138, 618, 713, 37196, 62998, 868, 2174];
+            
+            const rastgeleSecim = Math.floor(Math.random() * efsaneDiziler.length);
+            const secilenDiziId = efsaneDiziler[rastgeleSecim];
+            
+            fetch('https://api.tvmaze.com/shows/' + secilenDiziId)
+                .then(cevap => cevap.json())
+                .then(dizi => {
+
+                    document.getElementById('api-resim').src = dizi.image.medium;
+                    document.getElementById('api-isim').innerText = dizi.name;
+                    document.getElementById('api-puan').innerText = "⭐ " + dizi.rating.average + " / 10";
+                    
+                    if(dizi.genres && dizi.genres.length > 0) {
+                        document.getElementById('api-tur').innerText = dizi.genres[0];
+                    } else {
+                        document.getElementById('api-tur').style.display = 'none';
+                    }
+                    
+                })
+                .catch(hata => {
+                    document.getElementById('api-isim').innerText = "Veri çekilemedi.";
+                });
+        });
+    </script>
 </body>
 </html>
