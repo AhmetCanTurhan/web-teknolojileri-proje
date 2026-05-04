@@ -16,6 +16,6 @@ var x = setInterval(function() {
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("sayac").innerHTML = "O GUN BUGUN!";
+    document.getElementById("sayac").innerHTML = "O GUN BUGÜN!";
   }
 }, 1000);

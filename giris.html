@@ -13,7 +13,7 @@
             <div class="container-fluid px-4">
                 
                 <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
-                    <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - İletişim</kucuk>
+                    <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - Giriş</kucuk>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
@@ -44,23 +44,29 @@
         </nav>
 
     <div class="col-lg-4 mx-auto container-fluid px-3 pt-3">
-        
         <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
             <div class="text-center text-md-start text-light">
                 <h3 class="text-center fw-bold fs-1 mb-5">Giriş Yap</h3>
-
-                <form>
+                <form novalidate action="login.php" method="post" onsubmit="formuDenetle(event)">
                     <div class="row text-center text-md-start text-light">
-                        <div class="col-md-12"><input type="email" id="giris" class="form-control form-control-lg mb-4" placeholder="Email"></div>
-                        <div class="col-md-12"><input type="password" id="sifre-giris" class="form-control form-control-lg mb-4" placeholder="Şifreniz..."></div>
+                        <div class="col-md-12"><input type="email" id="giris" name="giris" class="form-control form-control-lg mb-4" placeholder="Email"></div>
+                        <div class="col-md-12"><input type="password" id="sifre-giris" name="sifre-giris" class="form-control form-control-lg mb-4" placeholder="Şifreniz..."></div>
                         <div class="col-12 d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary btn-lg bg-dark w-md-auto px-5">Giriş</button>
+                            <button type="submit" class="btn btn-primary btn-lg bg-dark w-md-auto px-5 mb-2">Giriş</button>
                         </div>
+
+                        <div id="uyari-kutusu1"></div>
+                        <div id="uyari-kutusu2"></div>
+                        
                     </div>
                 </form>
+                
                 
             </div>
         </div>
     </div>
+
+    <script src="js/giris-dogrulama.js"></script>
+
     </body>
 </html>
