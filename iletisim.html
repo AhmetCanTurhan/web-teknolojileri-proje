@@ -1,81 +1,96 @@
-    <!DOCTYPE html>
-    <html lang="tr" data-bs-theme="dark">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>İletişim</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/iletisim.css">
-    </head>
-    <body>
-        
-        <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-75 bg-dark border-bottom border-dark border-2 py-2">
-            <div class="container-fluid px-4">
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/iletisim.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-75 bg-dark border-bottom border-dark border-2 py-2">
+        <div class="container-fluid px-4">
+            
+            <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
+                <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - İletişim</kucuk>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="anaMenu">
                 
-                <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
-                    <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - İletişim</kucuk>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="anaMenu">
+                <ul class="navbar-nav mx-auto p-2 text-center my-3 my-lg-0">
                     
-                    <ul class="navbar-nav mx-auto p-2 text-center my-3 my-lg-0">
-                        
-                        <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                            <a class="nav-link text-light fs-5 fw-bold" href="index.html">Ana Sayfa</a>
-                        </li>
-                        <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                            <a class="nav-link text-light fs-5 fw-bold" href="sehrim.html">Şehrim</a>
-                        </li>
-                        <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                            <a class="nav-link text-light fs-5 fw-bold" href="ozgecmis.html">Özgeçmiş</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a class="nav-link text-light fs-5 fw-bold" href="iletisim.html">İletişim</a>
-                        </li>
-                    </ul>
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="sehrim.html">Şehrim</a>
+                    </li>
+                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
+                        <a class="nav-link text-light fs-5 fw-bold" href="ozgecmis.html">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link text-light fs-5 fw-bold" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
 
-                    <div class="d-flex justify-content-center mt-3 mt-lg-0">
-                        <a href="giris.html" class="btn btn-outline-light me-2">Giriş Yap</a>
-
-                    </div>
-        </nav>
-        <form novalidate id="iletisimForm" class="needs-validation">
-            <div class="col-lg-8 mx-auto container-fluid px-3 pt-3">
-                <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
-                    <div class="row text-center text-md-start text-light">
-                        <h1 class="display-4 fw-bold mb-3">İletişim</h1>
-                        <div class="col-md-6"><input type="text" id="ad" class="form-control form-control-lg mb-4" placeholder="Adınız"></div>
-                        <div class="col-md-6"><input type="text" id="soyad" class="form-control form-control-lg mb-4" placeholder="Soyadınız"></div>
-                    </div>
-
-                    <div class="row text-center text-md-start text-light">
-                        <div class="col-md-6"><input type="email" id="email" class="form-control form-control-lg mb-4" placeholder="E-posta Adresiniz"></div>
-                        <div class="col-md-6"><input type="text" id="konu" class="form-control form-control-lg mb-4" placeholder="Konu"></div>
-                        <div class="col-md-6"><input type="tel" id="telefon" class="form-control form-control-lg mb-4" placeholder="Telefon Numaranız"></div>
-                    </div>
-
-                    <div class="row text-center text-md-start text-light">
-                        <div class="col-md-12">
-                            <textarea class="form-control form-control-lg mb-2" id="mesaj" rows="5" placeholder="Mesajınız..."></textarea>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn btn-primary btn-lg mb-3 bg-dark " onclick="formuDenetle()">Gönder</button>
-
-                        <div id="uyari-kutusu1"></div>
-                        <div id="uyari-kutusu2"></div>
-                        <div id="uyari-kutusu3"></div>
-                        <div id="uyari-kutusu4"></div>
+                <div class="d-flex justify-content-center mt-3 mt-lg-0">
+                    <a href="giris.html" class="btn btn-outline-light me-2">Giriş Yap</a>
                 </div>
             </div>
-        </form>
-            
-            
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/dogrulama.js"></script>
-    </body>
-    </html>
+        </div>
+    </nav>
+
+    <form novalidate id="iletisimForm" class="needs-validation">
+        <div class="col-lg-8 mx-auto container-fluid px-3 pt-3">
+            <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
+                <div class="row text-center text-md-start text-light">
+                    <h1 class="display-4 fw-bold mb-3">İletişim</h1>
+                    <div class="col-md-6"><input type="text" id="ad" v-model="ad" class="form-control form-control-lg mb-4" placeholder="Adınız"></div>
+                    <div class="col-md-6"><input type="text" id="soyad" v-model="soyad" class="form-control form-control-lg mb-4" placeholder="Soyadınız"></div>
+                </div>
+
+                <div class="row text-center text-md-start text-light">
+                    <div class="col-md-6"><input type="email" id="email" v-model="email" class="form-control form-control-lg mb-4" placeholder="E-posta Adresiniz"></div>
+                    <div class="col-md-6"><input type="text" id="konu" v-model="konu" class="form-control form-control-lg mb-4" placeholder="Konu"></div>
+                    <div class="col-md-6"><input type="tel" id="telefon" v-model="telefon" class="form-control form-control-lg mb-4" placeholder="Telefon Numaranız"></div>
+                </div>
+
+                <div class="row text-center text-md-start text-light">
+                    <div class="col-md-12">
+                        <textarea class="form-control form-control-lg mb-2" id="mesaj" v-model="mesaj" rows="5" placeholder="Mesajınız..."></textarea>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-lg mb-3 bg-dark" onclick="formuDenetle()">JS ile Gönder</button>
+                
+                <button type="button" class="btn btn-primary btn-lg mb-3 bg-dark" @click="vueFormuDenetle">Vue ile Gönder</button>
+
+                <div id="uyari-kutusu1"></div>
+                <div id="uyari-kutusu2"></div>
+                <div id="uyari-kutusu3"></div>
+                <div id="uyari-kutusu4"></div>
+            </div>
+
+            <div v-if="vueHatalari.length > 0">
+                <div v-for="hata in vueHatalari" class="col-12 mt-2">
+                    <div v-if="vueHatalari.length > 0">
+                        <div v-for="hata in vueHatalari" class="col-12 mt-2">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+        
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dogrulama.js"></script>
+</body>
+</html>

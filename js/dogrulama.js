@@ -65,6 +65,6 @@ function formuDenetle() {
     }
 
     if (hatalar.length === 0) {
-        alert("Form başarıyla gönderildi!");
+        alert("Form JS ile başarıyla gönderildi!");
     }
 }
