@@ -46,8 +46,9 @@
     </nav>
 
     <form novalidate id="iletisimForm" class="needs-validation">
-        <div class="col-lg-8 mx-auto container-fluid px-3 pt-3">
+        <div class="col-lg-8 mx-auto container-fluid px-3 pt-3 mb-2 pb-2">
             <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
+
                 <div class="row text-center text-md-start text-light">
                     <h1 class="display-4 fw-bold mb-3">İletişim</h1>
                     <div class="col-md-6"><input type="text" id="ad" v-model="ad" class="form-control form-control-lg mb-4" placeholder="Adınız"></div>
@@ -56,8 +57,30 @@
 
                 <div class="row text-center text-md-start text-light">
                     <div class="col-md-6"><input type="email" id="email" v-model="email" class="form-control form-control-lg mb-4" placeholder="E-posta Adresiniz"></div>
-                    <div class="col-md-6"><input type="text" id="konu" v-model="konu" class="form-control form-control-lg mb-4" placeholder="Konu"></div>
+                    <div class="col-md-6">
+                        <select id="konu" v-model="konu" class="form-select form-select-lg mb-4">
+                                <option value="" disabled>Konu Seçiniz</option>
+                                <option value="İş Teklifi">İş Teklifi</option>
+                                <option value="Soru / Öneri">Soru / Öneri</option>
+                                <option value="Proje Geliştirme">Proje Geliştirme</option>
+                                <option value="Diğer">Diğer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row text-center text-md-start text-light">
                     <div class="col-md-6"><input type="tel" id="telefon" v-model="telefon" class="form-control form-control-lg mb-4" placeholder="Telefon Numaranız"></div>
+                    <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-4 mb-4">
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="radio" name="secim" id="sau" value="SAU" v-model="secim">
+                            <label class="form-check-label" for="sau">SAÜ'deyim</label>
+                        </div>
+        
+                        <div class="form-check fs-5">
+                            <input class="form-check-input" type="radio" name="secim" id="no-sau" value="Diger" v-model="secim">
+                            <label class="form-check-label" for="no-sau">SAÜ'de değilim</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row text-center text-md-start text-light">
@@ -66,24 +89,27 @@
                     </div>
                 </div>
 
-                <button type="button" class="btn btn-primary btn-lg mb-3 bg-dark" onclick="formuDenetle()">JS ile Gönder</button>
-                
-                <button type="button" class="btn btn-primary btn-lg mb-3 bg-dark" @click="vueFormuDenetle">Vue ile Gönder</button>
+                <div class="d-flex gap-3 mb-3">
+                    <button type="button" class="btn btn-primary btn-lg bg-dark" onclick="formuDenetle()">JS ile Gönder</button>
+                    <button type="button" class="btn btn-primary btn-lg bg-dark" @click="vueFormuDenetle">Vue ile Gönder</button>
+                </div>
+
+                <div class="row text-center text-md-start text-light mb-4">
+                    <div class="col-12">
+                        <div class="form-check fs-5 justify-content-center justify-content-md-start">
+                            <input class="form-check-input me-2" type="checkbox" id="onay" v-model="onay">
+                            <label class="form-check-label" for="onay">Kullanıcı sözleşmesini okudum ve onaylıyorum.</label>
+                        </div>
+                    </div>
+                </div>
 
                 <div id="uyari-kutusu1"></div>
                 <div id="uyari-kutusu2"></div>
                 <div id="uyari-kutusu3"></div>
                 <div id="uyari-kutusu4"></div>
-            </div>
-
-            <div v-if="vueHatalari.length > 0">
-                <div v-for="hata in vueHatalari" class="col-12 mt-2">
-                    <div v-if="vueHatalari.length > 0">
-                        <div v-for="hata in vueHatalari" class="col-12 mt-2">
-                            
-                        </div>
-                    </div>
-                </div>
+                <div id="uyari-kutusu5"></div>
+                <div id="uyari-kutusu6"></div>
+                <div id="uyari-kutusu7"></div>
             </div>
 
         </div>
