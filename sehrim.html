@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
+    <title>Şehrim - Çanakkale</title>
+
+    <script>
+        if(sessionStorage.getItem("oturum") !== "aktif") {
+            window.location.href = "index.html";
+        }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sehir.css">
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-75 bg-dark border-bottom border-dark border-2 py-2">
         <div class="container-fluid px-4">
             
-            <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
+            <a class="navbar-brand text-light fs-4 fw-bold" href="giris.html">Ahmet Can Turhan<br>
                 <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - Şehrim</kucuk>
             </a>
 
@@ -21,11 +29,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="anaMenu">
-                
                 <ul class="navbar-nav mx-auto p-2 text-center my-3 my-lg-0">
-                    
                     <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                        <a class="nav-link text-light fs-5 fw-bold" href="index.html">Ana Sayfa</a>
+                        <a class="nav-link text-light fs-5 fw-bold" href="giris.html">Ana Sayfa</a>
                     </li>
                     <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
                         <a class="nav-link text-light fs-5 fw-bold" href="sehrim.html">Şehrim</a>
@@ -39,8 +45,248 @@
                 </ul>
 
                 <div class="d-flex justify-content-center mt-3 mt-lg-0">
-                    <a href="giris.html" class="btn btn-outline-light me-2">Giriş Yap</a>
+                    <button onclick="cikisYap()" class="btn btn-danger me-2">Çıkış Yap</button>
                 </div>
-    </nav>
+            </div> </div> </nav>
+
+    <main class="container-fluid col-lg-8 mx-auto px-3 pt-4 mb-5">
+        
+        <section class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg mb-4">
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-3">Kısa bir deyiş...</h2>
+            <article>
+                <p class="fs-5 mb-0">Ben İstanbul'da doğdum, İstanbul'da büyüdüm. Babam da aynı şekilde. Kütüğümüz ise Muş. Hayatımda hiç gitmediğim, nasıl olduğunu bilmediğim bir yeri anlatmak istemedim. Beni ben yapan, hem doğduğum hem de doyduğum yeri sunmak istedim. Ama aynı zaman da İstanbul gibi bir şehri memleket olarak tanıtmayı içim sinmedi. Bu yüzden gidip görüp gezdiğim, kültürel bir mirasımız olan, aynı zaman da oralı olan dostumun isteği üzerine Çanakkale'yi tanıtmaya karar verdim.</p>
+            </article>
+        </section>
+
+        <section class="align-items-center bg-dark bg-opacity-75 p-2 p-md-3 rounded-4 shadow-lg mb-1">
+            <header>
+                <h1 class="text-center display-1 fw-bold text-white mb-4">ÇANAKKALE</h1>
+            </header>
+
+            <div class="slideshow-container">
+                
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="img/bogaz.jpg" alt="Boğaz">
+                    <div class="text">Boğaz</div>
+                </div>
+
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="img/balikci.jpg" alt="Balıkçı">
+                    <div class="text">Balıkçılar</div>
+                </div>
+
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="img/anit.jpg" alt="Şehitler Abidesi - 1">
+                    <div class="text">Şehitler Abidesi - 1</div>
+                </div>
+                
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="img/bigali-ataturk.jpg" alt="Bigalı Atatürk Evi">
+                    <div class="text">Bigalı Atatürk Evi</div>
+                </div>
+                
+                <div class="mySlides slide-fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="img/sehitlik.jpg" alt="Şehitlik">
+                    <div class="text">Şehitlik</div>
+                </div>
+
+                <a class="prev text-white text-decoration-none" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next text-white text-decoration-none" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="align-items-center bg-dark bg-opacity-75 p-2 p-md-3 rounded-4 shadow-lg mb-1"> 
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-3">Nüfus Bilgileri</h2>
+            <div class="fs-5 mb-0">- Çanakkale'nin toplam nüfusu 2024 yılı ADNKS sonuçlarına göre; 573.976'dir.</div>
+            <div class="fs-5 mb-0">- Nüfus büyüklüğüne göre iller arasında 38. sırada yer almaktadır.</div>
+            <div class="fs-5 mb-0">- Türkiye nüfusunun %0,66’sı Çanakkale’de ikamet etmektedir.</div>    
+            <div class="fs-5 mb-0">- Toplam nüfusun 356.050’si il ve ilçe merkezlerinde, 217.926’sı belde ve köylerde yaşamaktadır.</div>
+            <div class="fs-5 mb-0">- Nüfus yoğunluğu 58’dir. İller sıralamasında 52. sırada yer almaktadır.</div>
+            <div class="fs-5 mb-0">- Yıllık nüfus artış hızı binde 8,8 olup, iller sıralamasında 14. sırada yer almaktadır.</div>
+        </section>
+
+        <section class="align-items-center bg-dark bg-opacity-75 p-2 p-md-3 rounded-4 shadow-lg mb-1"> 
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-3">İlçeleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 px-3">
+                    <div class="fs-5 mb-0">- Ayvacık: Assos Antik Kenti'ne ev sahipliği yapar.</div>
+                    <div class="fs-5 mb-0">- Bayramiç: Kaz Dağları eteklerinde yer alır.</div>
+                    <div class="fs-5 mb-0">- Biga: Çanakkale'nin yüzölçümü en büyük ilçesidir.</div>    
+                    <div class="fs-5 mb-0">- Çan: Sanayisi ve seramik fabrikalarıyla öne çıkar.</div>
+                    <div class="fs-5 mb-0">- Çanakkale (Merkez): İl merkezidir.</div>
+                    <div class="fs-5 mb-0">- Eceabat: Gelibolu Yarımadası Tarihi Milli Parkı buradadır.</div>
+                    <div class="fs-5 mb-0">- Ezine: Peyniri ile meşhurdur.</div>
+                    <div class="fs-5 mb-0">- Gelibolu: Tarihi öneme sahip sahil ilçesidir.</div>
+                    <div class="fs-5 mb-0">- Gökçeada (İmroz): Türkiye'nin en büyük adası ve ilçesidir.</div>
+                    <div class="fs-5 mb-0">- Lapseki: Meyvecilik ve köprü bağlantısıyla bilinir.</div>
+                    <div class="fs-5 mb-0">- Yenice: Ormanlık alanı geniş olan ilçedir.</div>                    
+
+                </div>
+
+                <div class="col-lg-6 d-flex justify-content-center align-items-center px-3">
+                    <img src="img/ilceler.png" class="rounded border border-secondary" alt="İlçeler" style="width: 400px; height: auto; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <section class="align-items-center bg-dark bg-opacity-75 p-2 p-md-3 rounded-4 shadow-lg mb-1">
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-3">Yöresel Lezzetler</h2>
+            
+            <div class="row">
+                <div class="">
+                    <table class="table table-dark table-striped table-bordered border-secondary">
+                        <tbody>
+                            <tr>
+                                <th>Ovmaç Çorbası</th>
+                                <td>Sade ve pirinçli olarak hazırlanır.</td>
+                            </tr>
+                            <tr>
+                                <th>Domatesli Tarhana Çorbası</th>
+                                <td>Tarhana ve domates ya da salçanın eşsiz karışımıdır.</td>
+                            </tr>
+                            <tr>
+                                <th>İskorpit Çorbası</th>
+                                <td>İskorpit balığının sebzelerle haşlanmasıyla hazırlanan bir balık çorbasıdır.</td>
+                            </tr>
+                            <tr>
+                                <th>Ispanak Çorbası</th>
+                                <td>Taze ıspanak, soğan ve baharatlarla birlikte unla terbiye edilir.</td>
+                            </tr>
+                            <tr>
+                                <th>Tumbi</th>
+                                <td>Patlıcan, domates, soğan ile hazırlanan, kavrularak fırınlanan bir bulgur köftesi çeşididir.</td>
+                            </tr>
+                            <tr>
+                                <th>Ispanak Sarması</th>
+                                <td>Ispanak içerisine pirinçli/bulgurlu ve kıymalı iç harç konularak sarılıp salçalı sosla pişirildiği bir sebze yemeğidir.</td>
+                            </tr>
+                            <tr>
+                                <th>Çırpma</th>
+                                <td>Ispanak veya yeşil soğan gibi sebzelerin unlu-su karışımla harmanlanıp fırın tepsisine yayılarak pişirildiği, börek benzeri hafif ve pratik bir sebze yemeğidir.</td>
+                            </tr>
+                            <tr>
+                                <th>Melki Yemeği</th>
+                                <td>Kanlıca mantarının (melki) zeytinyağı, soğan ve bazen domatesle yapılan, etli dokuya sahip yoğun aromalı yöresel kavurmasıdır.</td>
+                            </tr>
+                            <tr>
+                                <th>Yumurtalı Tiken</th>
+                                <td>Şevketi bostan (tiken) otunun soğan ve yumurta ile pişirilmesiyle hazırlanan yöresel ve sağlıklı bir ot yemeğidir.</td>
+                            </tr>                                                                                      
+                            <tr>
+                                <th>Metez</th>
+                                <td>Metez, genellikle lor peyniri, patates veya kıyma ile doldurulup suda haşlanan, bazen pekmezle de tüketilen, Çerkes mutfağına özgü bir mantı türüdür.</td>
+                            </tr>
+                            <tr>
+                                <th>Tarhanalı Patlıcan</th>
+                                <td>Doğranmış patlıcanların soğan, zeytinyağı ve tarhana ile harmanlanarak pişirildiği, besleyici ve lezzetli bir tencere yemeğidir.</td>
+                            </tr>
+                            <tr>
+                                <th>Börülce Köftesi</th>
+                                <td>Haşlanmış börülcelerin soğan, maydanoz, yumurta ve çeşitli baharatlarla yoğrulup yağda kızartılmasıyla yapılan bir lezzettir.</td>
+                            </tr>                                                        
+
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg mb-1">
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-5">Gezilecek Yerler</h2>
+            
+            <div class="row align-items-center border-bottom border-secondary border-opacity-25 pb-4 mb-4">
+                <div class="col-lg-7 mb-3 mb-lg-0">
+                    <h3 class="fw-bold text-light">1. Gelibolu Tarihi Milli Parkı</h3>
+                    <p class="fs-5 mb-0 opacity-75">Çanakkale Savaşları'nın yaşandığı, manevi atmosferiyle her Türk vatandaşının görmesi gereken kutsal topraklardır. Conkbayırı, Anzak Koyu ve Şehitler Abidesi gibi destanın yazıldığı noktaları barındırır.</p>
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/gelibolu.jpg" alt="Gelibolu" class="img-fluid rounded border border-secondary shadow" style="height: 250px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="row align-items-center border-bottom border-secondary border-opacity-25 pb-4 mb-4">
+                <div class="col-lg-7 mb-3 mb-lg-0">
+                    <h3 class="fw-bold text-light">2. Assos Antik Kenti (Behramkale)</h3>
+                    <p class="fs-5 mb-0 opacity-75">Ayvacık ilçesinde bulunan Assos, felsefenin kurucularından Aristoteles'in de bir dönem yaşadığı tarihi bir liman kentidir. Athena Tapınağı'ndan Ege Denizi'ne karşı güneşi batırmak eşsiz bir deneyimdir.</p>
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/assos.jpg" alt="Assos" class="img-fluid rounded border border-secondary shadow" style="height: 250px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="row align-items-center border-bottom border-secondary border-opacity-25 pb-4 mb-4">
+                <div class="col-lg-7 mb-3 mb-lg-0">
+                    <h3 class="fw-bold text-light">3. Aynalı Çarşı</h3>
+                    <p class="fs-5 mb-0 opacity-75">Çanakkale türkülerine konu olmuş, şehrin en sembolik ve tarihi alışveriş noktalarından biridir. 1890 yılında inşa edilen çarşıda, şehrin ruhunu yansıtan yöresel hediyelik eşyalar ve el sanatları ürünleri bulabilirsiniz.</p>
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/aynali-carsi.jpg" alt="Aynalı Çarşı" class="img-fluid rounded border border-secondary shadow" style="height: 250px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="row align-items-center pb-2">
+                <div class="col-lg-7 mb-3 mb-lg-0">
+                    <h3 class="fw-bold text-light">4. Bozcaada</h3>
+                    <p class="fs-5 mb-0 opacity-75">Türkiye'nin en büyük üçüncü adası olan Bozcaada; tarihi kalesi, rüzgar gülleri, Arnavut kaldırımlı Rum sokakları ve muhteşem buz gibi koylarıyla Çanakkale'nin en gözde turizm merkezlerinden biridir.</p>
+                </div>
+                <div class="col-lg-5">
+                    <img src="img/bozcaada.jpg" alt="Bozcaada" class="img-fluid rounded border border-secondary shadow" style="height: 250px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg mb-5">
+            <h2 class="fs-2 fw-bold border-bottom border-secondary border-3 pb-2 mb-4">Kültürel Mirasımız: Troya Antik Kenti</h2>
+            
+            <div class="row">
+                
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <p class="fs-5">
+                        <strong>Troya (Truva) Antik Kenti</strong>, Çanakkale'nin Tevfikiye köyü yakınlarında, Hisarlık Tepesi'nde yer alan Troya (Truva) Antik Kenti, 5000 yılı aşkın tarihi ve Homeros'un İlyada destanında anlatılan ünlü Troya Savaşı'na ev sahipliği yapmasıyla dünyanın en önemli arkeolojik alanlarından biridir. 1998'den beri UNESCO Dünya Mirası Listesi'nde bulunan ören yeri, üst üste binmiş 9 farklı yerleşim katmanı ile Tunç Çağı'ndan Roma Dönemi'ne uzanan kesintisiz bir tarihi gözler önüne serer.
+                    </p>
+
+                    <ul class="fs-5 opacity-75 mb-4">
+                        <li>Homeros'un ünlü destanındaki Truva Savaşı'nın yaşandığı topraklardır.</li>
+                        <li><strong>1998 yılında UNESCO Dünya Kültür Mirası Listesi</strong>'ne  alınarak uluslararası bir miras olarak tescillenmiştir.</li>
+                        <li>Antik kent girişinde, bölgeden çıkarılan eserlerin sergilendiği modern bir müze bulunur.</li>
+                        <li>Kent içerisinde, filmlerde ve efsanelerde geçen tahta Truva Atı'nın temsili bir heykeli yer alır.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <img src="img/troya1.jpg" alt="Troya Antik Kenti 1" class="img-fluid rounded border border-secondary shadow mb-3" style="width: 100%; height: 250px; object-fit: cover;">
+                    
+                    <img src="img/troya2.jpg" alt="Troya Antik Kenti 2" class="img-fluid rounded border border-secondary shadow mb-3" style="width: 100%; height: 250px; object-fit: cover;">
+                    
+                    <a href="https://muze.gov.tr/muze-detay?SectionId=TRV01&DistId=TRV" target="_blank" class="btn btn-outline-light fs-5 d-flex justify-content-center align-items-center w-100">
+                        Resmi Müze Sayfasını İncele
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <img src="img/troya3.jpg" alt="Troya Antik Kenti 3" class="img-fluid rounded border border-secondary shadow" style="width: 100%; height: 250px; object-fit: cover;">
+                </div>
+                <div class="col-md-6">
+                    <img src="img/troya4.jpg" alt="Troya Antik Kenti 4" class="img-fluid rounded border border-secondary shadow" style="width: 100%; height: 250px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sehir-slayt.js"></script>
+    <script src="js/cikis.js"></script>
 </body>
 </html>

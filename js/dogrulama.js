@@ -97,7 +97,7 @@ function formuDenetle() {
     }
 
     if (hatalar.join("") === "") {
-        alert("Form JS ile başarıyla gönderildi!");
+        document.getElementById("iletisimForm").submit();
     }
 }
 
@@ -198,7 +198,7 @@ createApp({
                 }
             }
             else {
-                alert("Form Vue ile başarıyla gönderildi!");
+                document.getElementById("iletisimForm").submit();
             }
         }
     }

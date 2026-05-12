@@ -1,123 +1,37 @@
 <!DOCTYPE html>
-<html lang="tr" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-75 bg-dark border-bottom border-dark border-2 py-2">
-        <div class="container-fluid px-4">
-            
-            <a class="navbar-brand text-light fs-4 fw-bold" href="index.html">Ahmet Can Turhan<br>
-                <kucuk class="fs-6 fw-normal">Kişisel Web Sitesi - Ana Sayfa</kucuk>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#anaMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="anaMenu">
-                
-                <ul class="navbar-nav mx-auto p-2 text-center my-3 my-lg-0">
-                    
-                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                        <a class="nav-link text-light fs-5 fw-bold" href="index.html">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                        <a class="nav-link text-light fs-5 fw-bold" href="sehrim.html">Şehrim</a>
-                    </li>
-                    <li class="nav-item px-2 border-lg-bottom-0 border-lg-end border-light">
-                        <a class="nav-link text-light fs-5 fw-bold" href="ozgecmis.html">Özgeçmiş</a>
-                    </li>
-                    <li class="nav-item px-2">
-                        <a class="nav-link text-light fs-5 fw-bold" href="iletisim.html">İletişim</a>
-                    </li>
-                </ul>
-
-                <div class="d-flex justify-content-center mt-3 mt-lg-0">
-                    <a href="giris.html" class="btn btn-outline-light me-2">Giriş Yap</a>
-
-                </div>
-    </nav>
-
-    <div class="container-fluid px-3 pt-3">
-        
+    <html lang="tr" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giriş</title>  
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/iletisim.css">
+    </head>
+    <body>
+    <div class="col-lg-4 mx-auto container-fluid px-3 pt-3">
         <div class="align-items-center bg-dark bg-opacity-75 p-4 p-md-5 rounded-4 shadow-lg">
             <div class="text-center text-md-start text-light">
-                
-                <p class="fs-5 text-uppercase tracking-wide mb-1 text-light opacity-75">Merhaba, Ben</p>
-                <h1 class="display-4 fw-bold mb-3">Ahmet Can Turhan</h1>
-                <h2 class="fs-3 fw-light mb-4">Bilgisayar Mühendisliği Öğrencisi & Geliştirici</h2> 
-                
-                <p class="fs-5 fw-light lh-lg mb-4 opacity-75">
-                    Sakarya Üniversitesi'nde 1. sınıf öğrencisiyim. Ağırlıklı olarak C#, C++ ve web teknolojileri üzerinde çalışıyor, yazılım algoritmalarından oyun tasarımına kadar geniş bir yelpazede projeler geliştirerek teknoloji dünyasında kendimi sürekli yeniliyorum.
-                </p>
+                <h3 class="text-center fw-bold fs-1 mb-5">Giriş Yap</h3>
+                <form novalidate action="login.php" method="post" onsubmit="formuDenetle(event)">
+                    <div class="row text-center text-md-start text-light">
+                        <div class="col-md-12"><input type="email" id="giris" name="giris" class="form-control form-control-lg mb-4" placeholder="Email"></div>
+                        <div class="col-md-12"><input type="password" id="sifre-giris" name="sifre-giris" class="form-control form-control-lg mb-4" placeholder="Şifreniz..."></div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg bg-dark w-md-auto px-5 mb-2">Giriş</button>
+                        </div>
 
-                <h3 class="fs-4 fw-bold mb-3">🎮- HOBİLERİM</h3>
-                <p class="fs-5 fw-light lh-lg mb-4 opacity-75">
-                    Boş zamanlarımda oyun oynamayı, yeni teknolojileri keşfetmeyi ve kod yazmayı seviyorum. Futbol ile içli dışlıyım ve sık sık maç izlerim. Bunun haricinde video oyunlarını çok seviyorum, özellikle gizlilik ve parkur türündeki oyunlara ilgi duyuyorum. Ayrıca, yeni teknolojileri takip etmek ve yazılım geliştirme alanında kendimi sürekli geliştirmek benim için büyük bir tutku.
-                </p>
-
-                <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mt-4">
-                    <a href="https://www.linkedin.com/in/ahmetcanturhan" class="btn btn-light btn-lg fw-bold px-4 rounded-pill" target="_blank">Linkedin</a>
-                    <a href="https://github.com/ahmetcanturhan" class="btn btn-light btn-lg fw-bold px-4 rounded-pill" target="_blank">Github</a>
-                </div>
+                        <div id="uyari-kutusu1"></div>
+                        <div id="uyari-kutusu2"></div>
+                        
+                    </div>
+                </form>
+                
+                
             </div>
         </div>
     </div>
 
-<div class="container-fluid px-4 px-lg-3 mt-4 mb-1">
-        <div class="row">
-            <div class="col-lg-4 col-md-12 d-flex flex-column gap-2">
-                
-                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 d-flex align-items-center">
-                    
-                    <img id="api-resim" src="https://via.placeholder.com/100x140" class="rounded me-4 border border-secondary" alt="Kapak" style="width: 100px; height: 140px; object-fit: cover;">
-                    
-                    <div>
-                        <h4 class="fs-4 text-white fw-bold border-bottom border-secondary pb-2 mb-2">Favori Dizilerimden Bir Parça</h4>
-                        
-                        <h5 id="api-isim" class="text-light mb-2">Yükleniyor...</h5>
-                        <span id="api-puan" class="badge bg-success fs-6 me-2">⭐ - / 10</span>
-                        <span id="api-tur" class="badge bg-secondary">Tür</span>
-                    </div>
-                </div>
+    <script src="js/giris-dogrulama.js"></script>
 
-                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 d-flex align-items-center">
-
-                    <div>
-                        <h4 class="fs-5 text-white border-bottom fw-bold border-secondary pb-2 mb-2 text-center">Sevdiğim Bir Alıntı</h4><br>
-                        <h4 class="fs-5 text-white fw-bold border-secondary pb-2 mb-2">"Hayat futbola fena halde benzer. Futbol, şahsi beceri gerektirir ama aslında toplu oynanan, yani insanların bir takım halinde oynadıkları bir oyundur. Hayat da öyle değil mi? İstediğin kadar yetenekli ol, iyi bir takımın yoksa kaybedersin. Evet, kaybedersin."<br><br> - Dar Alanda Kısa Paslaşmalar (2019)
-                        </h4>
-                    </div>
-                </div>  
-                
-                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 d-flex align-items-center">
-                    <img id="api-resim" src="img/agalar.jpg" class="rounded me-4 border border-secondary" alt="Kapak" style="width: 100px; height: 140px; object-fit: cover;">
-                    
-                    <div>
-                        <h4 class="fs-4 text-white fw-bold border-bottom border-secondary pb-2 mb-2">Dostlarımla Buluşmaya Kalan...</h4>
-                        <p id="sayac" class="fs-8 text-white fw-bold border-secondary pb-2 mb-2"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-8 col-md-12 d-flex mt-3 mt-lg-0">
-                <div class="bg-dark bg-opacity-75 p-4 rounded-4 shadow-lg border border-secondary border-opacity-25 flex-grow-1 w-100">
-                    <h4 class="fs-4 text-white fw-bold border-bottom border-secondary pb-2 mb-2">Hakkımda Kısa Bir Video</h4>
-                    <div class="ratio ratio-16x9">
-                        <br>
-                        <iframe src="https://www.youtube.com/embed/0sGZgX8nqjA" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/zamanlayici.js"></script>
-</body>
+    </body>
 </html>

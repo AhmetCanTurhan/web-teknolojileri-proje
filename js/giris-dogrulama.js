@@ -39,8 +39,8 @@ function formuDenetle(event) {
         for (var j = 0; j < hatalar.length; j++) {
             if (j < 2) {
                 var hedefKutu = document.getElementById("uyari-kutusu" + (j + 1));
-                hedefKutu.innerHTML = hatalar[j];
-                hedefKutu.className = "text-light bg-danger bg-opacity-50 rounded col-12 p-2 mt-2 mb-2";
+                hedefKutu.className = "col-12";
+                hedefKutu.innerHTML = "<div class='text-light bg-danger bg-opacity-50 rounded p-2 mt-2'>" + hatalar[j] + "</div>";
             }
         }
 
