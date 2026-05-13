@@ -26,7 +26,7 @@ function formuDenetle(event) {
     if (sifreDegeri === "") hatalar.push("Şifre alanı boş bırakılamaz!");
 
     if (emailDegeri !== "" && !girisDenetleme())
-        hatalar.push("Geçerli bir Sakarya Üniversitesi öğrenci e-postası girin. (Örn: B251210010@sakarya.edu.tr)");
+        hatalar.push("Geçerli bir Sakarya Üniversitesi öğrenci e-postası girin. (Örn: B251210010@ogr.sakarya.edu.tr)");
 
     if (sifreDegeri !== "" && sifreDegeri.toUpperCase() !== ogrenciNo.toUpperCase())
         hatalar.push("Hatalı şifre! Lütfen tekrar deneyin.");

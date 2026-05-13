@@ -18,7 +18,7 @@
             </div>
 
             <h3 class="border-bottom border-secondary pb-2 mb-3">Gönderilen Bilgiler:</h3>
-            
+        <div class="table-responsive"> 
             <table class="table table-dark table-striped table-bordered border-secondary mt-3 fs-5">
                 <tbody>
                     <tr>
@@ -51,6 +51,7 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
 
             <div class="text-center mt-4">
                 <a href="giris.html" class="btn btn-outline-light">Hemen Ana Sayfaya Dön</a>
