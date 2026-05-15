@@ -1,4 +1,3 @@
-
 // E-posta doğrulama fonksiyonu
 function mailValidation() {
     var email = document.getElementById("email").value;
